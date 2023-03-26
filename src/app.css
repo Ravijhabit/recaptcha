@@ -8,7 +8,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height:50rem;
+    overflow-y: scroll;
+    /* padding:3rem 0; */
     background-color: var(--primary);
     color:var(--secondary);
 }
@@ -20,35 +22,39 @@
     --primary:rgb(37,37,37);
     --secondary: white;
 }
+.dark .captcha>p{
+    background-blend-mode: negative;
+    color:black;
+}
 .header{
     margin:0;
     text-align:center;
 }
 .formContainer{
     max-width:90%;
-    width:450px;
+    width:28.125rem;
     box-sizing: border-box;
     border:1px solid var(--outline);
-    padding:20px 30px;
-    border-radius:10px;
+    padding:1.25rem 1.875rem;
+    border-radius:0.625rem;
 }
 .singleInput{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height:100px;
+    height:6.25rem;
 }
 .singleInput>label{
     align-self: flex-start;
 }
 .singleInput>input{
     align-self: flex-start;
-    height:50px;
+    height:3.125rem;
     width:90%;
-    padding:0 12px;
-    border-radius: 16px;
-    border:2px solid var(--outline);
+    padding:0 0.75rem;
+    border-radius:1rem;
+    border:0.125rem solid var(--outline);
     outline: none;
     align-items: flex-end;
     background: var(--primary);
@@ -59,37 +65,38 @@
     align-items: center;
     justify-content: space-evenly;
     width:90%;
-    height: 50px;
-    border-radius:16px;
-    border:2px solid var(--outline);
+    height: 3.125rem;
+    border-radius:1rem;
+    border:0.125rem solid var(--outline);
 }
 .captcha>p{
     flex-grow: 1;
     flex-shrink: 1;
     height: 80%;
-    padding:4px 10px;
-    font-size:30px;
-    letter-spacing: 8px;
+    padding:0.125rem 0.625rem;
+    justify-self: center;
+    font-size:1.875rem;
+    letter-spacing: 0.5rem;
     background:url('https://www.codeproject.com/KB/scripting/CreateCaptcha/1.JPG');
-    border-radius:16px 0 0 16px;
+    border-radius:1rem 0 0 1rem;
 }
 .cover>svg{
     stroke:white;
-    width: 35px;
+    width: 2.1875rem;
     height: 100%;
 }
 .cover{
     background:blue;
-    width: 40px;
+    width: 2.5rem;
     height:100%;
     cursor: pointer;
     justify-self: flex-end;
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 0.75rem 0.75rem 0;
 }
 .btn{
-    height:50px;
-    border-radius:8px;
-    padding:0 20px;
+    height:3.125rem;
+    border-radius:0.5rem;
+    padding:0 1.25rem;
     border:0;
     background:blueviolet;
     color:white;
@@ -102,25 +109,50 @@
 .switchMode{
     cursor:pointer;
     position: relative;
-    top:60px;
-    left:160px;
+    top:3.75rem;
+    left:10rem;
     border:0;
 }
 .switchMode>svg{
-    width:30px;
-    height:30px;
+    width:1.875rem;
+    height:1.875rem;
     stroke:black;
 }
 .moon{
-    background: rgb(84, 107, 235);
-    /* border-radius: 50%; */
+    background: rgb(125, 197, 255);
 }
 .sun{
-    background: rgb(124, 199, 218);
+    background: rgb(173, 173, 173);
 }
 .moon>svg{
     stroke:white;
 }
 .sun>svg{
     stroke:yellow;
+}
+@media(max-width:900px){
+    .captcha>p{
+        letter-spacing: 0.25rem;
+        font-size:1.5rem;
+    }
+}
+@media(max-width:450px){
+    .captcha>p{
+        letter-spacing: 0.1rem;
+        font-size:1rem;
+    }
+    .captcha{
+        width:80%;
+    }
+    .switchMode{
+        left:7rem;
+    }
+}
+@media(max-width:350px){
+    .captcha>p{
+        letter-spacing: 0;
+    }
+    .switchMode{
+        left:5rem;
+    }
 }

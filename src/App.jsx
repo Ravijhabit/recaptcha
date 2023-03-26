@@ -19,6 +19,12 @@ function App() {
     }else{
       if(name && email && password){
         alert('Sign Up successful');
+        setName('');
+        setEmail('');
+        setPassword('');
+        setCaptcha(generateCaptcha);
+        setUserCaptcha('');
+        setNightMode(false);
       }else{
         alert('Please fill all field values');
         setCaptcha(generateCaptcha);
