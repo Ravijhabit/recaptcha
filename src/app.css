@@ -1,0 +1,109 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.header{
+    margin:0;
+    text-align:center;
+}
+.formContainer{
+    max-width:90%;
+    width:450px;
+    box-sizing: border-box;
+    border:1px solid blueviolet;
+    padding:20px 30px;
+    border-radius:10px;
+}
+.singleInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100px;
+}
+.singleInput>label{
+    align-self: flex-start;
+}
+.singleInput>input{
+    align-self: flex-start;
+    height:50px;
+    width:90%;
+    padding:0 12px;
+    border-radius: 16px;
+    border:2px solid blueviolet;
+    outline: none;
+    align-items: flex-end;
+}
+.captcha{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:90%;
+    height: 50px;
+    border-radius:16px;
+    border:2px solid black;
+}
+.captcha>p{
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 80%;
+    padding:4px 10px;
+    font-size:30px;
+    letter-spacing: 8px;
+    background:url('https://www.codeproject.com/KB/scripting/CreateCaptcha/1.JPG');
+    border-radius:16px 0 0 16px;
+}
+.cover>svg{
+    stroke:white;
+    width: 35px;
+    height: 100%;
+}
+.cover{
+    background:blue;
+    width: 40px;
+    height:100%;
+    cursor: pointer;
+    justify-self: flex-end;
+    border-radius: 0 12px 12px 0;
+}
+.btn{
+    height:50px;
+    border-radius:8px;
+    padding:0 20px;
+    border:0;
+    background:blueviolet;
+    color:white;
+    cursor:pointer;
+}
+.btn:hover{
+    background:#8855c2;
+    color:rgb(240, 240, 240);
+}
+.switchMode{
+    cursor:pointer;
+    position: relative;
+    top:60px;
+    left:160px;
+    border:0;
+}
+.switchMode>svg{
+    width:30px;
+    height:30px;
+    stroke:black;
+}
+.moon{
+    background: rgb(84, 107, 235);
+    /* border-radius: 50%; */
+}
+.sun{
+    background: rgb(124, 199, 218);
+}
+.moon>svg{
+    stroke:white;
+}
+.sun>svg{
+    stroke:yellow;
+}
