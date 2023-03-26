@@ -11,8 +11,22 @@ function App() {
     event.preventDefault();
     setCaptcha(generateCaptcha);
   }
+  const submitHandler = (event)=>{
+    event.preventDefault();
+    if(captcha !== userCaptcha){
+      alert('please enter a valid captcha');
+      setCaptcha(generateCaptcha);
+    }else{
+      if(name && email && password){
+        alert('Sign Up successful');
+      }else{
+        alert('Please fill all field values');
+        setCaptcha(generateCaptcha);
+      }
+    }
+  }
   return (
-    <div className="app">
+    <div className={`app ${nightMode? 'light':'dark'}`}>
         <button className={`switchMode ${nightMode? 'moon':'sun'}`}  onClick={()=>setNightMode(!nightMode)}>
           { 
             nightMode?
@@ -26,7 +40,7 @@ function App() {
 
           }
         </button>
-        <form className='formContainer'>
+        <form onSubmit={submitHandler} className='formContainer'>
           <h1 className='header'>Sign Up</h1>
           <div className='singleInput'>
             <label htmlFor="name">
